@@ -254,7 +254,7 @@ angular.module('myApp.info', ['ngRoute'])
     factory.readList = function(){
         return $http({
             method: 'GET',
-            url: 'http://api-test.local/api/infos'
+            url: apiLink + '/api/infos'
         });
     };
 
@@ -267,7 +267,7 @@ angular.module('myApp.info', ['ngRoute'])
                 'email' : $scope.email,
                 'description' : $scope.description
             },
-            url: 'http://api-test.local/api/infos'
+            url: apiLink + '/api/infos'
         });
     };
 
@@ -275,7 +275,7 @@ angular.module('myApp.info', ['ngRoute'])
     factory.readOne = function(id){
         return $http({
             method: 'GET',
-            url: 'http://api-test.local/api/infos/' + id
+            url: apiLink + '/api/infos/' + id
         });
     };
 
@@ -290,7 +290,7 @@ angular.module('myApp.info', ['ngRoute'])
                 'email' : $scope.email,
                 'description' : $scope.description
             },
-            url: 'http://api-test.local/api/infos/' + $scope.id
+            url: apiLink + '/api/infos/' + $scope.id
         });
     };
 
@@ -298,7 +298,7 @@ angular.module('myApp.info', ['ngRoute'])
     factory.delete = function(id){
         return $http({
             method: 'DELETE',
-            url: 'http://api-test.local/api/infos/' + id
+            url: apiLink + '/api/infos/' + id
         });
     };
 
