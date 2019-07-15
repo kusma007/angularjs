@@ -6,11 +6,6 @@ describe('myApp.info module', function() {
 
   describe('info controller', function(){
 
-    it('should ....', inject(function($controller) {
-      //spec body
-      var infoCtrl = $controller('InfoCtrl');
-      expect(infoCtrl).toBeDefined();
-    }));
 
   });
 });

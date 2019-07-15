@@ -4,12 +4,11 @@ angular.module('myApp.info', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/info', {
-    templateUrl: 'info/info.html',
     controller: 'InfoCtrl'
   });
 }])
 
-.controller('InfoCtrl', ['$scope','$mdDialog','$mdToast','infoFactory', function($scope, $mdDialog, $mdToast, infoFactory) {
+.controller('InfoCtrl', function($scope, $mdDialog, $mdToast, infoFactory) {
 
     // read list
     $scope.readList = function(){
@@ -244,7 +243,7 @@ angular.module('myApp.info', ['ngRoute'])
         });
 
     };
-}])
+})
 
 .factory("infoFactory", function($http){
 
